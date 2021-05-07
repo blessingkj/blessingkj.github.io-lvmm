@@ -1,0 +1,712 @@
+@charset "UTF-8";
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/*a标签颜色*/
+/*边框颜色*/
+/*顶部高度高度*/
+/*隐藏线高度*/
+/*顶部a标签指定到达颜色*/
+/*顶部小图标边框*/
+/*顶部图片边框*/
+/*小图标显示图片下端隐藏线*/
+.hiddenLine, .tool .tool-in .tool-left li.active::after, .tool .tool-in .tool-right li:first-child:hover::after, .tool .tool-in .tool-right li:last-child:hover::after, .tool .tool-in .tool-right li.wechat:hover::after, .tool .tool-in .tool-right li.applets:hover::after, .tool .tool-in .tool-right li.sina:hover::after, .tool .tool-in .tool-right li.tel:hover::after, .tool .tool-in .tool-right li.phone:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+
+/*顶部工具条*/
+.tool {
+  width: 100%;
+  height: 30px;
+  background: #FAFAFA;
+  position: relative;
+  z-index: 900;
+}
+.tool .tool-in {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.tool .tool-in ul {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.tool .tool-in ul li {
+  height: 100%;
+  line-height: 30px;
+  margin: 0 5px;
+  padding: 0 5px;
+  position: relative;
+  vertical-align: middle;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.tool .tool-in ul li a:hover {
+  color: #F60;
+}
+.tool .tool-in .tool-left li:first-child i {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url("./../images/icons.png") no-repeat 0 -70px;
+  vertical-align: middle;
+}
+.tool .tool-in .tool-left li:first-child div {
+  width: 360px;
+  height: 380px;
+  padding: 10px;
+  border: 1px solid #CCC;
+  position: absolute;
+  left: -1px;
+  top: 30px;
+  background: white;
+  display: none;
+  overflow: hidden;
+}
+.tool .tool-in .tool-left li:first-child div dl {
+  line-height: 26px;
+}
+.tool .tool-in .tool-left li:first-child div dl dt {
+  width: 50px;
+  height: 20px;
+}
+.tool .tool-in .tool-left li:first-child div dl dd {
+  width: 310px;
+}
+.tool .tool-in .tool-left li:first-child div dl dd a {
+  white-space: nowrap;
+}
+.tool .tool-in .tool-left li.active {
+  background: white;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+.tool .tool-in .tool-left li.active > i {
+  background-position: -18px -70px;
+}
+.tool .tool-in .tool-left li.active > a {
+  color: #F60;
+}
+.tool .tool-in .tool-right li:first-child, .tool .tool-in .tool-right li:last-child {
+  padding: 0 15px;
+}
+.tool .tool-in .tool-right li:first-child a, .tool .tool-in .tool-right li:last-child a {
+  position: relative;
+}
+.tool .tool-in .tool-right li:first-child a .triangle, .tool .tool-in .tool-right li:last-child a .triangle {
+  position: absolute;
+  right: -10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-width: 3px;
+  border-style: solid solid solid solid;
+  border-color: #6C6C6C transparent transparent transparent;
+}
+.tool .tool-in .tool-right li:first-child .list, .tool .tool-in .tool-right li:last-child .list {
+  background: white;
+  width: 100%;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: -1px;
+  top: 30px;
+  text-align: center;
+  display: none;
+}
+.tool .tool-in .tool-right li:first-child:hover, .tool .tool-in .tool-right li:last-child:hover {
+  background: white;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+.tool .tool-in .tool-right li:first-child:hover a i, .tool .tool-in .tool-right li:last-child:hover a i {
+  transform: rotateZ(180deg) translateY(5px);
+}
+.tool .tool-in .tool-right li:first-child:hover div, .tool .tool-in .tool-right li:last-child:hover div {
+  display: block;
+}
+.tool .tool-in .tool-right li.wechat div, .tool .tool-in .tool-right li.applets div, .tool .tool-in .tool-right li.sina div, .tool .tool-in .tool-right li.tel div, .tool .tool-in .tool-right li.phone div {
+  background: white;
+  position: absolute;
+  display: none;
+  left: -1px;
+  top: 30px;
+  padding: 10px;
+  border: 1px solid #CCC;
+}
+.tool .tool-in .tool-right li.wechat a i, .tool .tool-in .tool-right li.applets a i, .tool .tool-in .tool-right li.sina a i, .tool .tool-in .tool-right li.tel a i, .tool .tool-in .tool-right li.phone a i {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url("./../images/icons.png") no-repeat;
+  vertical-align: middle;
+}
+.tool .tool-in .tool-right li.wechat:hover, .tool .tool-in .tool-right li.applets:hover, .tool .tool-in .tool-right li.sina:hover, .tool .tool-in .tool-right li.tel:hover, .tool .tool-in .tool-right li.phone:hover {
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+.tool .tool-in .tool-right li.wechat:hover div, .tool .tool-in .tool-right li.applets:hover div, .tool .tool-in .tool-right li.sina:hover div, .tool .tool-in .tool-right li.tel:hover div, .tool .tool-in .tool-right li.phone:hover div {
+  display: block;
+}
+.tool .tool-in .tool-right li.wechat a i {
+  background-position: -20px -90px;
+}
+.tool .tool-in .tool-right li.applets a i {
+  background-position: -420px -320px;
+}
+.tool .tool-in .tool-right li.sina a i {
+  background-position: -20px -110px;
+}
+.tool .tool-in .tool-right li.sina:hover {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.tool .tool-in .tool-right li.tel a i {
+  background-position: 0 -130px;
+}
+.tool .tool-in .tool-right li.tel:hover {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.tool .tool-in .tool-right li.phone div {
+  width: 210px;
+  height: 70px;
+  right: -1px !important;
+}
+.tool .tool-in .tool-right li.phone a i {
+  background-position: 0 -150px;
+}
+.tool .tool-in .tool-right li:last-child {
+  padding: 0 25px;
+}
+
+/*顶部广告*/
+.ad {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.ad .ad-in {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.ad .ad-in a {
+  display: none;
+}
+.ad .ad-in a span {
+  width: 15px;
+  height: 15px;
+  background: url("./../images/icons.png") no-repeat -100px -190px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/*头部区域*/
+.header {
+  width: 100%;
+  height: 80px;
+}
+.header .header-in {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.header .header-in .logo {
+  padding-top: 11px;
+}
+.header .header-in .search {
+  width: 660px;
+  height: 42px;
+  margin-left: 50px;
+  margin-top: 19px;
+}
+.header .header-in .search .search-city {
+  width: 130px;
+  height: 100%;
+  background: #fff7ec;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 10px;
+  border: 3px solid #f90;
+  box-sizing: border-box;
+}
+.header .header-in .search .search-city b {
+  font-size: 15px;
+  font-weight: normal;
+  color: #444;
+  margin-right: 5px;
+}
+.header .header-in .search .search-city span {
+  color: #bbb;
+}
+.header .header-in .search .search-city i {
+  display: inline-block;
+  width: 10px;
+  height: 7px;
+  background: url("./../images/search-home.png") no-repeat -20px -20px;
+  margin-left: 35px;
+}
+.header .header-in .search .search-box {
+  width: 520px;
+  height: 100%;
+  background: #CCCCCC;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 3px solid #f90;
+  box-sizing: border-box;
+}
+.header .header-in .search .search-box .search-type {
+  width: 100px;
+  height: 100%;
+  line-height: 42px;
+  padding-left: 10px;
+  border-right: 1px solid #f90;
+  background: #fff7ec;
+}
+.header .header-in .search .search-box .search-type b {
+  color: #f90;
+  font-size: 15px;
+}
+.header .header-in .search .search-box .search-type i {
+  display: inline-block;
+  width: 10px;
+  height: 7px;
+  background: url("./../images/search-home.png") no-repeat -20px -20px;
+  margin-left: 20px;
+}
+.header .header-in .search .search-box input {
+  width: 320px;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.header .header-in .search .search-box .search-btn {
+  width: 100px;
+  height: 100%;
+  background: #ff9900;
+  line-height: 42px;
+}
+.header .header-in .search .search-box .search-btn i {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background: url("./../images/search-home.png") no-repeat -40px -40px;
+  margin-left: 20px;
+  position: relative;
+  top: 5px;
+}
+.header .header-in .search .search-box .search-btn span {
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+.header .header-in .tip {
+  padding-top: 15px;
+}
+
+/*导航区域*/
+.nav {
+  width: 100%;
+  height: 44px;
+  background: #c38;
+}
+.nav .nav-in {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.nav .nav-in li {
+  height: 100%;
+  line-height: 44px;
+  float: left;
+  padding: 0 10px;
+}
+.nav .nav-in li:hover {
+  background: #a81c54;
+}
+.nav .nav-in li.selected i {
+  transform: rotateZ(180deg);
+}
+.nav .nav-in li a {
+  font-size: 15px;
+  color: white;
+}
+.nav .nav-in li i {
+  display: inline-block;
+  width: 9px;
+  height: 6px;
+  background: url("./../images/icons.png") no-repeat -130px -300px;
+  margin-left: 5px;
+}
+.nav .sub-nav {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background: white;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  display: none;
+  z-index: 200;
+}
+.nav .sub-nav p {
+  position: absolute;
+  display: inline-block;
+}
+.nav .sub-nav p a {
+  font-size: 14px;
+  margin: 0 10px;
+}
+.nav .sub-nav p a:hover {
+  color: #f49;
+}
+.nav .sub-nav .nav-arrow {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid solid solid solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  display: none;
+}
+
+/*广告轮播*/
+.banner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.banner .banner-in {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.banner .banner-in li {
+  opacity: 0;
+  transition: all 0.5s linear 0s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: yellow;
+}
+.banner .banner-in li img {
+  vertical-align: bottom;
+}
+.banner .banner-number {
+  width: 1200px;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.banner .banner-number li {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.banner .banner-number li.active-2 {
+  background: #d37;
+}
+.banner .tab {
+  width: 560px;
+  height: 360px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  margin-left: -600px;
+}
+.banner .tab .tab-left {
+  width: 80px;
+  height: 100%;
+  text-align: center;
+}
+.banner .tab .tab-left li {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #4d6072;
+  box-sizing: border-box;
+  background: rgba(60, 87, 105, 0.8);
+}
+.banner .tab .tab-left li.active {
+  background: white;
+  border-left: 3px solid #ef3388;
+  box-sizing: border-box;
+}
+.banner .tab .tab-left li.active a {
+  color: #ef3388;
+}
+.banner .tab .tab-left li.active:hover {
+  background: white;
+}
+.banner .tab .tab-left li:hover {
+  background: #455769;
+}
+.banner .tab .tab-left li a {
+  font-size: 15px;
+  color: white;
+}
+.banner .tab .tab-right {
+  width: 480px;
+  height: 100%;
+}
+.banner .tab .tab-right > div {
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background: white;
+}
+.banner .tab .tab-right > div.active {
+  display: block;
+}
+.banner .tab .tab-right > div .tab-top {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 2px solid #bbb;
+}
+.banner .tab .tab-right > div .tab-top li {
+  padding: 0 10px;
+}
+.banner .tab .tab-right > div .tab-top li.active {
+  position: relative;
+}
+.banner .tab .tab-right > div .tab-top li.active a {
+  color: #ef3388;
+  font-weight: bold;
+}
+.banner .tab .tab-right > div .tab-top li.active p {
+  width: 100%;
+  height: 2px;
+  background: #ef3388;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+.banner .tab .tab-right > div .tab-top li.active p i {
+  display: inline-block;
+  width: 11px;
+  height: 6px;
+  background: url("./../images/lv_search.png") no-repeat -340px 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.banner .tab .tab-right > div .tab-top li a {
+  font-size: 15px;
+  color: #333;
+}
+.banner .tab .tab-right > div .tab-top li a:hover {
+  color: #ef3388;
+}
+.banner .tab .tab-right > div .tab-bottom input {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.banner .tab .tab-right > div .tab-bottom > div {
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #bbb;
+}
+.banner .tab .tab-right > div .tab-bottom > div span {
+  display: inline-block;
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  background: #ef3388;
+  border-radius: 5px;
+}
+.banner .tab .tab-right > div .tab-bottom > dl {
+  margin-top: 10px;
+}
+.banner .tab .tab-right > div .tab-bottom > dl dt {
+  margin-right: 10px;
+}
+.banner .tab .tab-right > div .tab-bottom > dl dt dd {
+  width: 350px;
+}
+.banner .tab .tab-right > div .tab-bottom > dl dt dd a {
+  white-space: nowrap;
+  color: #CCCCCC;
+}
+.banner .tab .tab-right > div .tab-bottom > dl dt dd span {
+  margin: 0 5px;
+  color: #CCCCCC;
+}
+
+/*秒杀区*/
+.spike {
+  width: 100%;
+  height: 320px;
+  margin-top: 20px;
+}
+.spike .spike-in {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.spike .spike-in .spike-top {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 2px solid #bbb;
+  box-sizing: border-box;
+  position: relative;
+}
+.spike .spike-in .spike-top .spike-left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.spike .spike-in .spike-top .spike-left li {
+  margin-right: 30px;
+}
+.spike .spike-in .spike-top .spike-left li.active a {
+  color: #ef3388;
+}
+.spike .spike-in .spike-top .spike-left li a {
+  font-size: 20px;
+  color: #666;
+}
+.spike .spike-in .spike-top > P {
+  width: 80px;
+  height: 2px;
+  background: #ef3388;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: all 0.3s linear 0s;
+}
+.spike .spike-in .spike-top > P i {
+  display: inline-block;
+  width: 11px;
+  height: 6px;
+  background: url("./../images/lv_search.png") no-repeat -340px 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.spike .spike-in .spike-top > a {
+  margin-top: 10px;
+}
+.spike .spike-in .spike-bottom {
+  width: 100%;
+  height: 260px;
+  display: none;
+  justify-content: space-between;
+}
+.spike .spike-in .spike-bottom li {
+  width: 220px;
+  height: 260px;
+  background: white;
+  position: relative;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.spike .spike-in .spike-bottom li:hover {
+  box-shadow: 0 0 10px #666;
+}
+.spike .spike-in .spike-bottom li:hover p {
+  color: #f60;
+}
+.spike .spike-in .spike-bottom li a img {
+  width: 100%;
+}
+.spike .spike-in .spike-bottom li a p {
+  color: #333;
+  padding: 0 10px;
+  line-height: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+.spike .spike-in .spike-bottom li a p b {
+  color: #390;
+}
+.spike .spike-in .spike-bottom li a p span {
+  color: #666;
+  margin: 0 5px;
+}
+.spike .spike-in .spike-bottom li a div {
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.spike .spike-in .spike-bottom li a div p {
+  font-size: 20px;
+  color: #f60;
+  position: absolute;
+  left: 5px;
+  bottom: 30px;
+}
+.spike .spike-in .spike-bottom li a div p span {
+  font-size: 12px;
+  color: #666;
+}
+.spike .spike-in .spike-bottom li a div i {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  color: white;
+  line-height: 30px;
+  text-align: center;
+  background: #f60;
+  border-radius: 5px;
+  font-style: normal;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.spike .spike-in .spike-bottom.active {
+  display: flex;
+}
